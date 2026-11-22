@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Start screen overlay – police logo, title, subtitle, Start button */
+/* Start screen overlay â€“ police logo, title, subtitle, Start button */
 .start-screen {
   position: fixed;
   inset: 0;
@@ -158,7 +158,7 @@ body::-webkit-scrollbar {
   opacity: 1;
 }
 
-/* Portrait play toggle – floating + start-screen twin */
+/* Portrait play toggle â€“ floating + start-screen twin */
 .portrait-btn {
   position: fixed;
   top: 16px;
@@ -389,7 +389,7 @@ body.start-screen-open .portrait-btn:not(.portrait-btn--start) {
   100% { background: transparent; }
 }
 
-/* Game: +100 popup – centered on target (inherits stage rotation) */
+/* Game: +100 popup â€“ centered on target (inherits stage rotation) */
 .score-popup {
   position: fixed;
   left: 0;
@@ -613,7 +613,7 @@ body.start-screen-open .portrait-btn:not(.portrait-btn--start) {
   gap: 24px;
 }
 
-/* Fancy header login button – scrolls to #verify-form */
+/* Fancy header login button â€“ scrolls to #verify-form */
 .header-login-btn {
   display: inline-flex;
   align-items: center;
@@ -895,7 +895,7 @@ body.start-screen-open .portrait-btn:not(.portrait-btn--start) {
   margin-bottom: 24px;
 }
 
-/* Services grid - أهم الخدمات */
+/* Services grid - Ø£Ù‡Ù… Ø§Ù„Ø®Ø¯Ù…Ø§Øª */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -937,7 +937,7 @@ body.start-screen-open .portrait-btn:not(.portrait-btn--start) {
   color: var(--gray-600);
 }
 
-/* Partner section - شريك المستثمر */
+/* Partner section - Ø´Ø±ÙŠÙƒ Ø§Ù„Ù…Ø³ØªØ«Ù…Ø± */
 .alt-bg {
   background: var(--gray-100);
 }
@@ -974,8 +974,8 @@ body.start-screen-open .portrait-btn:not(.portrait-btn--start) {
   object-fit: contain;
 }
 
-/* Guide section - احذر من الاحتيال slider (RTL: prev right, next left) */
-/* احذر من الاحتيال – dynamic so it fits when zoomed; background for clearer text */
+/* Guide section - Ø§Ø­Ø°Ø± Ù…Ù† Ø§Ù„Ø§Ø­ØªÙŠØ§Ù„ slider (RTL: prev right, next left) */
+/* Ø§Ø­Ø°Ø± Ù…Ù† Ø§Ù„Ø§Ø­ØªÙŠØ§Ù„ â€“ dynamic so it fits when zoomed; background for clearer text */
 .guide-section {
   overflow-x: hidden;
   background: linear-gradient(135deg, #c8e6c9 0%, #dcedc8 50%, #e8eaf6 100%);
@@ -1238,7 +1238,7 @@ html[dir="rtl"] .guide-slider-next svg {
   margin-top: 8px;
 }
 
-/* Fake secure badge – game sign (false sense of security) */
+/* Fake secure badge â€“ game sign (false sense of security) */
 .fake-secure-badge {
   display: inline-flex;
   align-items: center;
@@ -1263,7 +1263,7 @@ html[dir="rtl"] .guide-slider-next svg {
   color: var(--gray-600);
 }
 
-/* Help section - كيف يمكننا مساعدتك */
+/* Help section - ÙƒÙŠÙ ÙŠÙ…ÙƒÙ†Ù†Ø§ Ù…Ø³Ø§Ø¹Ø¯ØªÙƒ */
 .help-intro {
   color: var(--gray-600);
   margin-bottom: 24px;
@@ -1439,7 +1439,7 @@ html[dir="rtl"] .guide-slider-next svg {
   }
 }
 
-/* UAE Pass red error toast – top of screen, single-tap from UAE Pass */
+/* UAE Pass red error toast â€“ top of screen, single-tap from UAE Pass */
 .uaepass-toast {
   position: fixed;
   top: 0;
@@ -1687,7 +1687,7 @@ html[dir="rtl"] .guide-slider-next svg {
   font-size: 0.95rem;
 }
 
-/* Credit – bottom right corner (visible on start screen and main page) */
+/* Credit â€“ bottom right corner (visible on start screen and main page) */
 .page-credit {
   position: fixed;
   bottom: 12px;
@@ -1709,7 +1709,7 @@ html[dir="rtl"] .guide-slider-next svg {
   margin: 0;
 }
 
-/* ----- Default: normal landscape 16:9. Portrait play: rotate 90° so URL sits on the right ----- */
+/* ----- Default: normal landscape 16:9. Portrait play: rotate 90Â° so URL sits on the right ----- */
 .page-stage {
   min-height: 100%;
   position: relative;
@@ -1735,9 +1735,9 @@ html.portrait-play body {
 }
 
 /*
-  Rotate the whole stage 90° clockwise.
-  Portrait “top” (URL bar) maps to the RIGHT edge of the landscape screen;
-  the rest of the page scrolls “down” toward the left.
+  Rotate the whole stage 90Â° clockwise.
+  Portrait â€œtopâ€ (URL bar) maps to the RIGHT edge of the landscape screen;
+  the rest of the page scrolls â€œdownâ€ toward the left.
 */
 html.portrait-play .page-stage {
   position: fixed;
@@ -1764,7 +1764,7 @@ html.portrait-play .page-scroll {
   height: 100%;
 }
 
-/* Sticky URL bar at the portrait top → appears along the right side of the 16:9 screen */
+/* Sticky URL bar at the portrait top â†’ appears along the right side of the 16:9 screen */
 html.portrait-play .page-scroll .fake-url-bar {
   position: sticky;
   top: 0;
@@ -1775,14 +1775,23 @@ html.portrait-play .page-scroll .fake-url-bar {
 
 /* Overlays bind to the rotated frame (not the scrolling document) */
 html.portrait-play .page-stage .start-screen,
-html.portrait-play .page-stage .uaepass-toast,
 html.portrait-play .page-stage .modal-overlay,
 html.portrait-play .page-stage .game-over-overlay {
   position: absolute;
   inset: 0;
   width: auto;
   height: auto;
-  transform: none;
+}
+
+/* Toast stays a top bar (not full-screen); keep hide/show translate */
+html.portrait-play .page-stage .uaepass-toast {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  width: auto;
+  height: auto;
 }
 
 html.portrait-play .page-stage .portrait-btn:not(.portrait-btn--start) {
