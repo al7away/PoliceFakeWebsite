@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الرئيسية - دائرة التنمية الاقتصادية بالشارقة | SEDD</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="start-screen-open">
+  <div id="page-stage" class="page-stage">
+  <div id="page-scroll" class="page-scroll">
+  <!-- URL bar + page rotate together: URL ends up on the right of the 16:9 screen -->
+  <div class="fake-url-bar" aria-hidden="true" dir="ltr">
+    <div class="fake-url-bar-inner">
+      <div class="fake-url-nav">
+        <span class="fake-url-icon fake-url-back" title="Back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </span>
+        <span class="fake-url-icon fake-url-fwd" title="Forward">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+        <span class="fake-url-icon fake-url-reload" title="Reload">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </span>
+      </div>
+      <div class="fake-url-field">
+        <span class="fake-url-lock game-target" id="game-target-lock" data-points="100" title="Not secure – no valid HTTPS"> 
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </span>
+        <span class="fake-url-text game-target" id="game-target-url" data-points="100" data-hint="Fake URL – not the real sedd.ae">http://sedd-potral-governement.com</span>
+      </div>
+      <div class="fake-url-actions">
+        <span class="fake-url-icon fake-url-star js-difficulty-trigger" id="fake-url-bookmark" title="Difficulty" role="button" tabindex="0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header - SEDD style -->
+  <header class="top-bar">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <img src="assets/nav-logo-ar.svg" alt="SEDD - دائرة التنمية الاقتصادية بالشارقة" class="logo-img" width="180" height="56">
+        <span class="logo-sub">دائرة التنمية الاقتصادية بالشارقة</span>
+      </div>
+      <nav class="main-nav">
+        <a href="javascript:void(0)">الرئيسية</a>
+        <a href="javascript:void(0)">عن الدائرة</a>
+        <a href="javascript:void(0)">الخدمات الرقمية</a>
+        <a href="javascript:void(0)">تواصل معنا</a>
+        <a href="javascript:void(0)">حماية المستهلك</a>
+      </nav>
+      <div class="header-actions">
+        <span class="lang-toggle"><span class="active">العربية</span> | <span>English</span></span>
+        <a href="#verify-form" class="header-login-btn" aria-label="تسجيل الدخول">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          تسجيل الدخول
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Urgency banner - phishing tactic (game: sign = pressure to act now) -->
+  <div class="urgency-banner game-target" id="game-target-urgency" data-points="100">
+    <div class="container">
+      <span class="urgent-icon">⚠</span>
+      <strong>تنبيه:</strong> للاستفادة من خدمات المنصة، يجب التحقق من رخصتك وبياناتك. 
+      <a href="#verify-form" class="urgent-link">تحقق الآن ←</a>
+    </div>
+  </div>
+
+  <!-- Hero - like SEDD -->
+  <section class="hero">
+    <div class="hero-bg-img" aria-hidden="true">
+      <img src="assets/hero-illustration.svg" alt="" width="400" height="200">
+    </div>
+    <div class="container hero-content">
+      <h1>خدمات دائرة التنمية الاقتصادية</h1>
+      <p class="hero-tagline">ابدأ عملك التجاري في الشارقة من هنا</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">230 +</span><span class="stat-label">خدمة متميزة</span></div>
+        <div class="stat"><span class="stat-num">45 +</span><span class="stat-label">عاماً من التميز</span></div>
+        <div class="stat"><span class="stat-num">250.000 +</span><span class="stat-label">مستثمر محلي ودولي</span></div>
+        <div class="stat"><span class="stat-num">79.000 +</span><span class="stat-label">رخصة تجارية نشطة</span></div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#verify-form" class="btn btn-secondary-hero">تسجيل الدخول</a>
+        <a href="#verify-form" class="btn btn-primary">ابدأ عملك الآن</a>
+        <p class="hero-note">للاستفادة من خدمات المنصة، يجب أن تمتلك رخصة استثمار سارية. يمكنك تقديم طلب رخصة جديدة أو التواصل مع الدعم.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- أهم الخدمات - like SEDD -->
+  <section class="services section">
+    <div class="container">
+      <h2>أهم الخدمات</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="assets/icons/issue-license.svg" alt="" class="service-icon" width="48" height="48">
+          <h3>الإفادات الشخصية</h3>
+          <p>الإفادات الشخصية</p>
+        </div>
+        <div class="service-card">
+          <img src="assets/icons/renew-license.svg" alt="" class="service-icon" width="48" height="48">
+          <h3>تجديد رخصة</h3>
+          <p>تجديد رخصة</p>
+        </div>
+        <div class="service-card">
+          <img src="assets/icons/estimate.svg" alt="" class="service-icon" width="48" height="48">
+          <h3>حاسبة الرسوم</h3>
+          <p>حاسبة الرسوم</p>
+        </div>
+        <div class="service-card game-target" id="game-target-typo" data-points="100">
+          <img src="assets/icons/instant-license.svg" alt="" class="service-icon" width="48" height="48">
+          <h3>إصدار رخصاء فورية</h3>
+          <p>إصدار رخصاء فورية</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- شريك المستثمر - SEDD style -->
+  <section class="partner-section section alt-bg">
+    <div class="container">
+      <h2>شريك المستثمر</h2>
+      <div class="partner-grid">
+        <span class="partner-card"><img src="assets/icons/factory.svg" alt="" class="partner-icon" width="48" height="48"><span>مساحة المصانع</span></span>
+        <span class="partner-card"><img src="assets/icons/globe_asia.svg" alt="" class="partner-icon" width="48" height="48"><span>منطقة الملكية الأجنبية</span></span>
+        <span class="partner-card game-target" id="game-target-restaurant-logo" data-points="100"><img src="assets/icons/restaurant.png" alt="" class="partner-icon" width="48" height="48"><span>مساحة المطاعم</span></span>
+        <span class="partner-card"><img src="assets/icons/woman_2.svg" alt="" class="partner-icon" width="48" height="48"><span>مساحة رائدات الأعمال</span></span>
+        <span class="partner-card"><img src="assets/icons/construction.svg" alt="" class="partner-icon" width="48" height="48"><span>منطقة المقاولات</span></span>
+        <span class="partner-card"><img src="assets/icons/local_cafe.svg" alt="" class="partner-icon" width="48" height="48"><span>مساحة المقاهي</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- احذر من الاحتيال - fraud awareness tips slider -->
+  <section class="guide-section section">
+    <div class="container">
+      <h2>احذر من الاحتيال</h2>
+      <div class="guide-slider">
+        <button type="button" class="guide-slider-arrow guide-slider-prev" aria-label="السابق">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="guide-slider-viewport">
+          <div class="guide-slider-track">
+            <div class="guide-card">
+              <h3>1. دقق دائماً في عنوان الموقع (URL)</h3>
+              <p>انتبه جيداً للرابط الموجود في شريط العنوان؛ فالمواقع الاحتيالية غالباً ما تلجأ إلى استخدام عناوين طويلة جداً أو تحتوي على الكثير من الشرطات (-) لمحاولة تضليلك وإيهامك بأنها تابعة لجهة رسمية. تذكر دائماً أن المؤسسات الموثوقة تفضل الروابط المختصرة والواضحة التي تعكس اسمها الحقيقي دون رموز أو إضافات مشبوهة.</p>
+            </div>
+            <div class="guide-card">
+              <h3>2. ابحث عن الأخطاء الإملائية والتصميم الرديء</h3>
+              <p>المواقع المزيفة غالباً ما تفتقر إلى الاحترافية في التنفيذ. إذا لاحظت وجود أخطاء إملائية فادحة، أو حتى تصميماً جرافيكياً ضعيفاً وصوراً ذات جودة منخفضة، فهذه "علامات حمراء" قوية تدل على أن الموقع غير رسمي. المؤسسات الحقيقية تولي اهتماماً كبيراً بتفاصيل موقعها لضمان تجربة مستخدم موثوقة.</p>
+            </div>
+            <div class="guide-card">
+              <h3>3. تحقق من قسم "اتصل بنا" وبيانات التواصل</h3>
+              <p>قبل التعامل مع أي موقع، تأكد من مراجعة قسم معلومات الاتصال. غالباً ما تضع المواقع الوهمية أرقام هواتف شخصية أو أرقاماً وهمية لا علاقة لها بالجهة التي تدعي تمثيلها. قارن دائماً بين الأرقام الموجودة على الموقع وبين الأرقام الرسمية المعروفة لتلك المؤسسة، وتأكد من مطابقتها قبل تقديم أي معلومات حساسة.</p>
+            </div>
+            <div class="guide-card">
+              <h3>4. الحذر من الإلحاح في جمع البيانات الشخصية</h3>
+              <p>تذكر دائماً أن الهدف الأساسي للمواقع الاحتيالية هو سرقة هويتك أو بياناتك. ستجد هذه المواقع تصر بشكل مريب على مطالبتك بـ إنشاء حساب (Sign up) أو إدخال معلوماتك في نماذج إلكترونية متكررة حتى قبل السماح لك بتصفح المحتوى. إذا شعرت بوجود إلحاح غير مبرر لجمع بياناتك — مهما كانت بسيطة — فكن حذراً جداً، فالمواقع الموثوقة لا تطلب بيانات حساسة إلا في أضيق الحدود ولأسباب واضحة.</p>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="guide-slider-arrow guide-slider-next" aria-label="التالي">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- تسجيل الدخول / Verify - phishing form -->
+  <section id="verify-form" class="verify-section section">
+    <div class="container narrow">
+      <div class="verify-box">
+        <h2 class="game-target" id="game-target-verify" data-points="100">تسجيل الدخول / التحقق من الرخصة</h2>
+        <p class="verify-desc">للاستفادة من الخدمات الرقمية، يرجى التحقق من بياناتك ورخصتك التجارية.</p>
+        <div class="login-options">
+          <a href="javascript:void(0)" class="btn btn-uaepass-block js-uaepass-modal" aria-label="تسجيل الدخول بالهوية الرقمية">
+            <img src="assets/UAEPASS.png" alt="UAE Pass" class="uaepass-logo" width="200" height="52">
+          </a>
+        </div>
+        <p class="verify-divider">أدخل بياناتك يدوياً</p>
+        <form class="verify-form" onsubmit="return handleSubmit(event)">
+          <label>رقم الرخصة التجارية</label>
+          <input type="text" placeholder="أدخل رقم الرخصة" required>
+          <label>الاسم الكامل (صاحب الرخصة)</label>
+          <input type="text" placeholder="الاسم كما في الهوية" required>
+          <label>رقم الهوية الإماراتية</label>
+          <input type="text" placeholder="784-XXXX-XXXXXXX-X" maxlength="18" required>
+          <label>رقم الجوال</label>
+          <input type="tel" placeholder="+971 50 XXX XXXX" required>
+          <label>البريد الإلكتروني</label>
+          <input type="email" placeholder="example@email.com" required>
+          <button type="submit" class="btn btn-primary btn-full">إرسال التحقق</button>
+        </form>
+        <div class="fake-secure-badge game-target" id="game-target-secure-badge" data-points="100">
+          <span class="fake-secure-icon">🔒</span>
+          <span>اتصال آمن موثق</span>
+        </div>
+        <p class="form-note game-target" id="game-target-fake-secure" data-points="100">بياناتك آمنة ومشفرة. الموقع الرسمي لدائرة التنمية الاقتصادية بالشارقة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- كيف يمكني مساعدتك -->
+  <section class="help-section section alt-bg">
+    <div class="container">
+      <h2 class="game-target" id="game-target-help-heading" data-points="100">كيف يمكني مساعدتك</h2>
+      <p class="help-intro">نحن في دائرة التنمية الاقتصادية بالشارقة نعمل على دعم رواد الأعمال والمستثمرين وتمكينهم من تحقيق النجاح من خلال توفير بيئة اقتصادية محفزة وخدمات رقمية متكاملة.</p>
+      <div class="help-links">
+        <a href="javascript:void(0)">بنود المخالفات</a>
+        <a href="javascript:void(0)">شكاوى حماية المستهلك</a>
+        <a href="javascript:void(0)">الموافقات الخاصة لبعض الأنشطة</a>
+        <a href="javascript:void(0)">قائمة الخطاطين المعتمدين</a>
+        <a href="javascript:void(0)">الشركات العائلية</a>
+        <a href="javascript:void(0)">الإعلانات القانونية</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer - SEDD style -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/nav-logo-ar.svg" alt="SEDD" class="footer-logo" width="140" height="48">
+          <p>دائرة التنمية الاقتصادية بالشارقة</p>
+        </div>
+        <div class="footer-links">
+          <a href="javascript:void(0)">حكومة الشارقة</a>
+          <a href="javascript:void(0)">خدمات الموظفين</a>
+          <span class="footer-contact-line">
+            <a href="javascript:void(0)">تواصل معنا</a>
+            <span class="footer-phone game-target" id="game-target-phone" data-points="100">0587502283</span>
+          </span>
+          <span class="footer-email-line">
+            <span class="footer-email-label">البريد:</span>
+            <span class="footer-email game-target" id="game-target-email" data-points="100">sedd.governement@gmail.com</span>
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="javascript:void(0)">خريطة الموقع</a>
+          <a href="javascript:void(0)">الأسئلة الشائعة</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة لدائرة التنمية الاقتصادية بالشارقة © 2025</p>
+        <p><a href="javascript:void(0)">سياسة الخصوصية</a> <a href="javascript:void(0)">شروط الاستخدام</a></p>
+        <p class="footer-url game-target" id="game-target-footer-url" data-points="100">sedd-portal.com</p>
+      </div>
+    </div>
+  </footer>
+  </div><!-- /#page-scroll -->
+
+  <!-- Overlays: rotate with stage, stay fixed to the rotated viewport -->
+  <button type="button" id="portrait-btn" class="portrait-btn" title="اللعب بوضع عمودي" aria-label="اللعب بوضع عمودي" aria-pressed="false">
+    <svg class="portrait-btn-icon portrait-btn-icon--enter" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="14" height="20" rx="2"/><path d="M12 18v4M8 22h8"/></svg>
+    <svg class="portrait-btn-icon portrait-btn-icon--exit" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M12 7V3M8 3h8"/></svg>
+    <span class="portrait-btn-label">عمودي</span>
+  </button>
+
+  <!-- Red error toast (UAE Pass single-tap) – shown at top -->
+  <div id="uaepass-toast" class="uaepass-toast" aria-hidden="true" role="status">خدمة الهوية الرقمية لا تعمل حالياً.</div>
+  <!-- Hidden proxy for UAE Pass game target (single sign for both buttons) -->
+  <span id="game-target-uaepass" class="game-target-uaepass-proxy" aria-hidden="true"></span>
+
+  <!-- Start screen (beige): difficulty button in beige area + logo, title, subtitle, Start -->
+  <div id="start-screen" class="start-screen" aria-hidden="false">
+    <button type="button" id="difficulty-btn" class="difficulty-btn" title="مستوى الصعوبة" aria-label="مستوى الصعوبة">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+    </button>
+    <button type="button" id="portrait-btn-start" class="portrait-btn portrait-btn--start" title="اللعب بوضع عمودي" aria-label="اللعب بوضع عمودي" aria-pressed="false">
+      <svg class="portrait-btn-icon portrait-btn-icon--enter" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="14" height="20" rx="2"/><path d="M12 18v4M8 22h8"/></svg>
+      <svg class="portrait-btn-icon portrait-btn-icon--exit" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M12 7V3M8 3h8"/></svg>
+    </button>
+    <div class="start-screen-box">
+      <div class="start-screen-content">
+        <img src="assets/policeclear.png" alt="" class="start-screen-logo" width="240" height="240">
+        <h1 class="start-screen-title">هل أنت مستعد للفوز بجائزة؟</h1>
+        <p class="start-screen-subtitle" id="start-screen-subtitle">اكتشف علامات الموقع الوهمي لتحصل على نقاط. احصل على 700 نقطة أو أكثر للفوز.</p>
+        <button type="button" id="start-screen-btn" class="start-screen-btn">ابدأ</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-panel-wrapper">
+    <div class="game-score-panel" dir="ltr">
+      <div class="game-score-row">
+        <span class="game-score-label">Score</span>
+        <span id="game-score" class="game-score-value">0</span>
+        <span class="game-timer-sep">|</span>
+        <span class="game-timer-label">Time</span>
+        <span id="game-timer" class="game-timer-value game-timer--idle">0:00</span>
+      </div>
+    </div>
+    <button type="button" id="game-start-btn" class="game-start-btn">ابدأ</button>
+    <button type="button" id="game-restart-btn" class="game-restart-btn" style="display: none;">إعادة التشغيل</button>
+  </div>
+
+  <!-- UAE Pass error modal (centered) – game: sign = fake “UAE Pass not working” alert -->
+  <div id="game-over-modal" class="game-over-overlay" aria-hidden="true">
+    <div class="game-over-box">
+      <img src="assets/police.png" alt="" class="game-over-logo" width="200" height="200">
+      <h2 class="game-over-title" id="game-over-title">انتهى الوقت</h2>
+      <p class="game-over-message" id="game-over-message"></p>
+      <p class="game-over-score" id="game-over-score"></p>
+      <button type="button" id="game-over-btn" class="btn btn-primary game-over-btn"></button>
+    </div>
+  </div>
+  <!-- Difficulty: time + winning score (600, 700, 800) -->
+  <div id="difficulty-modal" class="modal-overlay difficulty-modal" aria-hidden="true">
+    <div class="modal-box difficulty-box">
+      <h3 class="modal-title">مستوى الصعوبة</h3>
+      <p class="difficulty-sub">اختر وقت اللعب قبل الضغط على ابدأ</p>
+      <div class="difficulty-score-row">
+        <button type="button" class="difficulty-score-btn js-difficulty-time-minus" aria-label="تقليل 30 ثانية">−</button>
+        <span class="difficulty-score-value" id="difficulty-time-display">90</span>
+        <span class="difficulty-score-unit">ثانية</span>
+        <button type="button" class="difficulty-score-btn js-difficulty-time-plus" aria-label="زيادة 30 ثانية">+</button>
+      </div>
+      <p class="difficulty-sub">نقاط الفوز</p>
+      <div class="difficulty-score-row">
+        <button type="button" class="difficulty-score-btn js-difficulty-win-minus" aria-label="تقليل 100">−</button>
+        <span class="difficulty-score-value" id="difficulty-score-display">700</span>
+        <button type="button" class="difficulty-score-btn js-difficulty-win-plus" aria-label="زيادة 100">+</button>
+      </div>
+      <button type="button" id="difficulty-close" class="btn btn-secondary">إغلاق</button>
+    </div>
+  </div>
+  <div id="uaepass-error-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box">
+      <div class="modal-icon">⚠</div>
+      <h3 class="modal-title">حدث خطأ</h3>
+      <p class="modal-message">خدمة الهوية الرقمية لا تعمل حالياً. يرجى المحاولة لاحقاً أو إدخال بياناتك يدوياً.</p>
+      <button type="button" id="modal-close" class="btn btn-primary">إغلاق</button>
+    </div>
+  </div>
+
+  <div class="page-credit" aria-label="إعداد وتقديم">
+    <p class="page-credit-label">اعداد وتقديم:</p>
+    <p class="page-credit-name">مساعد / حميد الحواي</p>
+  </div>
+  </div><!-- /#page-stage -->
+
+  <script src="script.js"></script>
+</body>
+</html>
